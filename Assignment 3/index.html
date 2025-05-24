@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about Singapore</title>
+</head>
+
+<style>
+    /* Element selector for all <p> tags */
+    p {
+        background: yellowgreen;
+        padding:10px;
+    }
+    /*Class selector for .text elements*/
+    .text {
+        color: red;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    /* Style for images */
+    img {
+        border: 3px solid black;
+        max-width: 300px;
+    }
+</style>
+<script>
+    // JavaScript function for page load alert
+    function loadWelcome() {
+        alert("Welcome to Singaporean Food Guide!");
+        console.log("Page loaded successfully"); // Log to console. To remove prior to production
+    }
+    // Call function when page loads
+    window.onload = loadWelcome;
+</script>
+<body>
+    <h1>All About Singapore Food</h1>
+     <!-- Paragraph with link -->
+     <p>Singapore is famous for its <a href="https://en.wikipedia.org/wiki/Singaporean_cuisine" target="_blank">
+        diverse cuisine</a> influenced by Chinese, Malay, and Indian cultures.</p>
+
+        <!-- Image with attributes -->
+    <img src="https://d22ir9aoo7cbf6.cloudfront.net/wp-content/uploads/sites/2/2018/08/chicken-rice-1.png" 
+    alt="Singaporean Chicken Rice" title="Popular Singaporean Dish">
+    
+    <p>Top 10 Popular Food</p>
+    <ul class="text">
+        <li>Chicken Rice</li>
+        <li>Hokkien Noodles</li>
+        <li>Nasi Lemak</li>
+    </ul>
+    
+    <!-- Ordered List -->
+    <h2>Where to Eat (Ranked)</h2>
+    <ol>
+        <li>Maxwell Food Centre</li>
+        <li>Lau Pa Sat</li>
+        <li>Newton Food Centre</li>
+    </ol>
+    
+
+</body>
+</html>
