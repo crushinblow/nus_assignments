@@ -1,0 +1,14 @@
+.details {
+  font-size: 1.4 rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  width: 500px;
+  border-radius: 0.8rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+span {
+  color: rgb(254, 89, 89);
+}

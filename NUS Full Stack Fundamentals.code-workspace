@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../class2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "NUS Full Stack Fundamentals"
+	}
+}

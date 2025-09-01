@@ -1,0 +1,13 @@
+//- PART 1c: ADD BOOK FORM
+extends layout
+
+block content
+  h1= title
+  form(action='/add-book', method='POST')
+    label(for='title') Title:
+    input(type='text', name='title', required)
+    br
+    label(for='author') Author:
+    input(type='text', name='author', required)
+    br
+    button(type='submit') Add Book

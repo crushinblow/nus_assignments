@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Fundamentals Assessment</title>
+
+    <!-- REACT CDN LINKS -->
+    <!-- Using React 17 since the assessment requires ReactDOM.render() -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- BABEL FOR JSX SUPPORT -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      /* GLOBAL STYLES */
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+
+      /* COMPONENT STYLES */
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+        padding: 8px;
+        background: #f8f9fa;
+        border-left: 3px solid #3498db;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- REACT MOUNT POINT -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+      /**
+       * QUESTION 3: FUNCTIONAL COMPONENT
+       * - Reusable GreetingComponent that accepts a 'name' prop
+       */
+      function GreetingComponent({ name = "Guest" }) {
+        return (
+          <div className="greeting">
+            <h2>Welcome, {name}!</h2>
+            <p>This demonstrates a React functional component.</p>
+          </div>
+        );
+      }
+
+      /**
+       * QUESTION 4: JSX LIST COMPONENT
+       * - Shows dynamic rendering of list items
+       * - Includes proper key prop for each item
+       */
+      function ToDoList() {
+        // Array of tasks - could come from API in real apps
+        const tasks = [
+          "Learn React fundamentals",
+          "Practice component architecture",
+          "Understand JSX syntax",
+          "Master state management",
+        ];
+
+        return (
+          <div className="todo-container">
+            <h2>My Learning Goals</h2>
+            <ul>
+              {tasks.map((task, index) => (
+                <li key={index}>
+                  <span className="task-text">{task}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      /**
+       * MAIN APP COMPONENT
+       * - Combines all components for rendering
+       * - Acts as the root component
+       */
+      function App() {
+        return (
+          <div className="container">
+            <h1>React Fundamentals Assessment</h1>
+
+            {/* Render GreetingComponent */}
+            <GreetingComponent name="Learner" />
+
+            {/* Render ToDoList */}
+            <ToDoList />
+
+            <footer>
+              <p>Demonstrating React components and JSX</p>
+            </footer>
+          </div>
+        );
+      }
+
+      /**
+       * RENDER THE APP
+       * - Uses ReactDOM.render() as specified in requirements
+       * - Mounts the App component to the root div
+       */
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+//- PART 1c: BOOK LIST TEMPLATE
+extends layout
+
+block content
+  h1= title
+  ul
+    each book in books
+      li #{book.title} by #{book.author}
+  a(href='/add-book') Add another book

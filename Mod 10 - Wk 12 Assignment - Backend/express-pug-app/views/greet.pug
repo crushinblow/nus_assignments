@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    // Link to static CSS file
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Hello, #{name}!
+    p Today is #{currentDate}
+    
+    // Add an image from the public/images folder
+    img(src="/images/logo.png", alt="Logo", width="100")
+    
+    p 
+      | try different names in the URL like 
+      a(href="/greet/Alice") /greet/Alice 
+      |  or 
+      a(href="/greet/Bob") /greet/Bob
+    a(href="/") Back to Home

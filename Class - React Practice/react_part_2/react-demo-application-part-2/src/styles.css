@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-color: rgb(125, 202, 163);
+  color: black;
+}
+
+h1 {
+  color: rgb(17, 9, 126);
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.primary-btn-md {
+  border: none;
+  color: white;
+  background-color: rgb(48, 26, 221);
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+  border-radius: 5rem;
+  transition: all 0.3s;
+}
+
+.primary-btn-md:hover {
+  cursor: pointer;
+  background-color: rgb(12, 0, 105);
+}
+
+.btn-sm {
+  border: none;
+  color: white;
+  background-color: #141313;
+  padding: 0.8rem;
+  margin: 1rem 0rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn-sm:hover {
+  cursor: pointer;
+  background-color: rgb(70, 70, 70);
+}
