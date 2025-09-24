@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI LMS - Module 5: JavaScript Interactivity</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      background-color: #f5f7fa;
+    }
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1a73e8;
+    }
+    .highlight {
+      color: green;
+      font-weight: bold;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1> AI-Powered LMS: JavaScript Practice</h1>
+
+
+  <!-- Example 1: Button Interactivity with Alert -->
+  <div class="section">
+    <h2>1. Enroll in Course</h2>
+    <button onclick="enroll()">Click to Enroll</button>
+    <script>
+      function enroll() {
+        alert(" You have been enrolled in the 'JavaScript Essentials' course!");
+      }
+    </script>
+  </div>
+
+
+  <!-- Example 2: DOM Manipulation -->
+  <div class="section">
+    <h2>2. AI Suggestion Box</h2>
+    <p id="suggestionText">Click the button below to get a course suggestion.</p>
+    <button onclick="getSuggestion()">Get AI Suggestion</button>
+
+
+    <script>
+      function getSuggestion() {
+        let text = document.getElementById("suggestionText");
+        text.textContent = " We recommend: 'Responsive Web Design' next!";
+        text.style.color = "#1a73e8";
+      }
+    </script>
+  </div>
+
+
+  <!-- Task 1: Validate Learner Email -->
+  <div class="section">
+    <h2>3. Validate Learner Email</h2>
+    <form onsubmit="return validateEmail(event)">
+      <input type="text" id="email" placeholder="Enter your email to receive updates">
+      <button type="submit">Submit</button>
+    </form>
+    <p id="emailMessage" class="highlight"></p>
+    </div>
+
+    <script>
+      // TASK: Complete this function
+      // document.getElementById("...") is a JavaScript DOM method used to grab an HTML element by its id attribute.
+      function validateEmail(event) {
+        event.preventDefault(); //  Stop page reload when form is submited , let the js function handle so can see the "emil accepted message"
+        let emailInput = document.getElementById("email").value; //Gets whtever the user typed in the input box.
+
+
+        // TODO: If email does not include '@', show  Invalid email address" in #emailMessage and return false
+        // TODO: If valid, show "Email accepted!" and return true
+       
+        if (!emailInput.includes("@")) { //In JavaScript, the exclamation mark ! means “NOT”.
+        document.getElementById("emailMessage").textContent = "Invalid email address";
+        document.getElementById("emailMessage").style.color = "red";
+        return false; // stop form submit
+      
+        } else {
+        document.getElementById("emailMessage").textContent = "Email accepted!";
+        document.getElementById("emailMessage").style.color = "green";
+        return true; // allow submit
+  }
+}
+    </script>
+  
+
+  <!-- Task 2: Keypress Event Handling -->
+  <div class="section">
+    <h2>4. Type Your Learning Goal</h2>
+    <input type="text" id="goalInput" placeholder="e.g., Master JavaScript...">
+    
+    <p id="goalOutput">Your goal: </p>
+  </div>
+
+    <script>
+      // TASK: Add keypress event on #goalInput
+      // Each time a key is pressed, update #goalOutput to include the latest text
+
+      // HINT: Use addEventListener on 'keypress' or 'input'
+      // Use .value to get text from input
+      // document.getElementById("...") is a JavaScript DOM method used to grab an HTML element by its id attribute.
+
+    let goalInput = document.getElementById("goalInput"); 
+
+    goalInput.addEventListener("input", function () {   
+    // "input"  built-in browser event that comes from the DOM APIlistens to  input e.g type, delete etc, 
+    // run the function
+
+    //Reads the user’s input (goalInput.value) and output para with tha text
+    document.getElementById("goalOutput").textContent =
+    "Your goal: " + goalInput.value;
+    //	.textContent → for any HTML element’s text (display/output)
+    //.value → for <input>, <textarea> (user-entered data)
+	
+});
+    </script>
+  
+</body>
+</html>
+

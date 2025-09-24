@@ -1,0 +1,18 @@
+/* Flexbox layout for feature boxes */
+.feature-box {
+  display: flex;
+  flex-wrap: wrap;            /* wrap on small screens */
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Feature card styling */
+.card-flex {
+  flex: 1 1 240px;            /* responsive min width */
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  text-align: center;
+}
